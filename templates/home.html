@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div>
+    <link href="{{ url_for('static', filename='css/result.css') }}" rel="stylesheet" />
+    
+    <div class="result-container">
+      <div class="result-container1">
+        <div class="result-import">
+          <h1>CHATGPT - API</h1>
+          <p class="result-text1">Custom prompt - Adam Baylin</p>
+          <div class="result-container2">
+            <div
+              data-thq="thq-dropdown"
+              class="result-thq-dropdown list-item"
+            >
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="result-dropdown-toggle"
+              >
+                <span class="result-text2">Choice prompt</span>
+                <div
+                  data-thq="thq-dropdown-arrow"
+                  class="result-dropdown-arrow"
+                >
+                  <svg viewBox="0 0 1024 1024" class="result-icon">
+                    <path d="M426 726v-428l214 214z"></path>
+                  </svg>
+                </div>
+              </div>
+              <ul data-thq="thq-dropdown-list" class="result-dropdown-list">
+                <li data-thq="thq-dropdown" class="result-dropdown list-item">
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="result-dropdown-toggle1"
+                  >
+                    <span class="result-text3">Viết lại đoạn văn</span>
+                  </div>
+                </li>
+                <li
+                  data-thq="thq-dropdown"
+                  class="result-dropdown1 list-item"
+                >
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="result-dropdown-toggle2"
+                  >
+                    <span class="result-text4">Viết outline</span>
+                  </div>
+                </li>
+                <li
+                  data-thq="thq-dropdown"
+                  class="result-dropdown2 list-item"
+                >
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="result-dropdown-toggle3"
+                  >
+                    <span class="result-text5">
+                      Từ outline -&gt; chi tiết
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button class="result-start button">Start</button>
+          </div>
+          <textarea
+            placeholder="Nhập nội dung vào đây"
+            class="result-input textarea"
+          ></textarea>
+        </div>
+        <div class="result-export">
+          <textarea disabled="" class="result-output textarea"></textarea>
+          <div class="result-button-export">
+            <button class="result-continue button">Continue</button>
+            <button class="result-copy button">Copy All</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
